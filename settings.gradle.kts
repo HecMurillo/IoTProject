@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "IotProject"
 include(":app")
+include(":app")
