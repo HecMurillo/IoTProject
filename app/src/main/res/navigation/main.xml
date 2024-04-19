@@ -6,21 +6,27 @@
     app:startDestination="@id/listFragment">
 
     <fragment
+        android:id="@+id/listFragment"
+        android:name="com.uth_diseno.hasher.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_arduinoItems"
+            app:destination="@id/arduinoItems" />
+    </fragment>
+    <fragment
+        android:id="@+id/arduinoItems"
+        android:name="com.uth_diseno.hasher.ArduinoItems"
+        android:label="fragment_arduino_items"
+        tools:layout="@layout/fragment_arduino_items" >
+        <action
+            android:id="@+id/action_arduinoItems_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/firstFragment"
         android:name="com.uth_diseno.hasher.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/listFragment"
-        android:name="com.uth_diseno.hasher.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
-        <action
-            android:id="@+id/action_listFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_first" />
+
 </navigation>
