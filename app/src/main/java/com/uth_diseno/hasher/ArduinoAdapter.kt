@@ -5,42 +5,42 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class ArduinoAdapter(
-    private val hasherList: List<Arduinos>,
-    private val onItemClick: (Int) -> Unit
-) : RecyclerView.Adapter<ArduinoAdapter.HashersViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HashersViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_list, parent, false)
-        return HashersViewHolder(view)
+class ArduinoAdapter(private val arduinoList: List<Arduinos>) : RecyclerView.Adapter<ArduinoAdapter.ArduinosViewHolder>() {
+
+    var onItemClickListener: OnItemClickListener? = null
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
-    override fun onBindViewHolder(holder: HashersViewHolder, position: Int) {
-        val hash = hasherList[position]
-        holder.render(hash)
+    inner class ArduinosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView.findViewById(R.id.url_image)
+        val textView: TextView = itemView.findViewById(R.id.list_title)
 
-        holder.itemView.setOnClickListener {
-            onItemClick(position)
+        init {
+            itemView.setOnClickListener {
+                onItemClickListener?.onItemClick(adapterPosition)
+            }
         }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArduinosViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
+        return ArduinosViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return hasherList.size
+        return arduinoList.size
     }
 
-    class HashersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image: ImageView = view.findViewById(R.id.url_image)
-        val title: TextView = view.findViewById(R.id.list_title)
-        val id: TextView = view.findViewById(R.id.list_text)
-
-        fun render(hash: Arduinos) {
-            Picasso.get().load(hash.image).into(image)
-            title.text = hash.title
-            id.text = hash.text
-        }
+    override fun onBindViewHolder(holder: ArduinosViewHolder, position: Int) {
+        val item = arduinoList[position]
+        Picasso.get().load(item.image).into(holder.imageView)
+        holder.textView.text = item.title
     }
 }
