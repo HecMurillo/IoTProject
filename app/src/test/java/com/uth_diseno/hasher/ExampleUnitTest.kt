@@ -1,4 +1,4 @@
-package com.julitoelnoob.iotproject
+package com.uth_diseno.hasher
 
 import org.junit.Test
 

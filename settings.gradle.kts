@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "IotProject"
+rootProject.name = "Hasher"
 include(":app")
