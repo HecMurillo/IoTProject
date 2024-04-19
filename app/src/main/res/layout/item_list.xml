@@ -27,46 +27,45 @@
             android:id="@+id/bottom_bar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/white"
+            style="@style/background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/hash_title"
+                android:id="@+id/list_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
                 android:layout_marginStart="8dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textStyle="bold"
                 tools:text="Titulo" />
 
             <TextView
-                android:id="@+id/hash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/hash_title"
-                app:layout_constraintStart_toEndOf="@id/hash_title"
+                app:layout_constraintBottom_toBottomOf="@id/list_title"
+                app:layout_constraintStart_toEndOf="@id/list_title"
                 tools:text="Hash" />
 
             <TextView
-                android:id="@+id/hash_id"
+                android:id="@+id/list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                app:layout_constraintTop_toBottomOf="@id/hash_title"
-                app:layout_constraintStart_toStartOf="@id/hash_title"
                 android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/list_title"
+                app:layout_constraintTop_toBottomOf="@id/list_title"
                 tools:text="ID" />
 
             <TextView
                 android:id="@+id/hash_key"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/hash_id"
-                app:layout_constraintStart_toEndOf="@id/hash_id"
+                app:layout_constraintBottom_toBottomOf="@id/list_text"
+                app:layout_constraintStart_toEndOf="@id/list_text"
                 tools:text="Hash key" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

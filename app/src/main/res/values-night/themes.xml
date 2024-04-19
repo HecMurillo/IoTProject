@@ -4,6 +4,11 @@
         <!-- Customize your dark theme here. -->
         <item name="colorPrimary">@color/black</item>
     </style>
+    
+    <style name="background" parent="Theme.Hasher">
+        <item name="backgroundColor">@color/black</item>
+
+    </style>
 
     <style name="navigatteButton" parent="Theme.Hasher">
         <item name="backgroundTint">@color/black</item>

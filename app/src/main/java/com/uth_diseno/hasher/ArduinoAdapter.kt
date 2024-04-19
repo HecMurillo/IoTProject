@@ -1,6 +1,5 @@
 package com.uth_diseno.hasher
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class ArduinoAdapter(private var hasherList: List<Arduinos>): RecyclerView.Adapter<ArduinoAdapter.HashersViewHolder>() {
+class ArduinoAdapter(
+    private val hasherList: List<Arduinos>,
+    private val onItemClick: (Int) -> Unit
+) : RecyclerView.Adapter<ArduinoAdapter.HashersViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HashersViewHolder {
-
-        val inflador = LayoutInflater.from(parent.context)
-
-        val view = inflador.inflate(R.layout.item_hashers, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val view = inflater.inflate(R.layout.item_list, parent, false)
         return HashersViewHolder(view)
     }
 
@@ -22,28 +23,24 @@ class ArduinoAdapter(private var hasherList: List<Arduinos>): RecyclerView.Adapt
         val hash = hasherList[position]
         holder.render(hash)
 
-        //aquí se aplica la lógica. ej: onClickListener
-
+        holder.itemView.setOnClickListener {
+            onItemClick(position)
+        }
     }
 
     override fun getItemCount(): Int {
         return hasherList.size
     }
 
-    class HashersViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class HashersViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.url_image)
-        val title: TextView = view.findViewById(R.id.hash_title)
-        val hashing: TextView = view.findViewById(R.id.hash)
-        val id: TextView = view.findViewById(R.id.hash_id)
-        val key: TextView = view.findViewById(R.id.hash_key)
+        val title: TextView = view.findViewById(R.id.list_title)
+        val id: TextView = view.findViewById(R.id.list_text)
 
-        @SuppressLint("SetTextI18n")
         fun render(hash: Arduinos) {
             Picasso.get().load(hash.image).into(image)
-            title.text = hash.title + ": "
-            hashing.text = hash.hashEncryptet
-            id.text = hash.id.toString() + " Key: "
-            key.text = hash.key
+            title.text = hash.title
+            id.text = hash.text
         }
     }
 }

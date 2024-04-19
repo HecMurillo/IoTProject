@@ -3,6 +3,8 @@ package com.uth_diseno.hasher
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.ImageView
 import android.widget.Toast
 
@@ -11,16 +13,11 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val logo = findViewById<ImageView>(R.id.imageSplash)
+        val i = Intent(this, AuthActivity::class.java)
 
-        logo.setOnClickListener {
-            Toast.makeText(
-                this,
-                "¡Bienvenido!",
-                Toast.LENGTH_SHORT).show()
-
-            val i = Intent(this, AuthActivity::class.java)
+        Handler(Looper.getMainLooper()).postDelayed({
             startActivity(i)
-        }
+            finish()
+        }, 1000)
     }
 }

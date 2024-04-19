@@ -5,6 +5,11 @@
 
     <style name="Theme.Hasher" parent="Base.Theme.Hasher" />
 
+    <style name="background" parent="Theme.Hasher">
+        <item name="backgroundColor">@color/white</item>
+
+    </style>
+
     <style name="navigatteButton" parent="Theme.Hasher">
         <item name="backgroundTint">@color/white</item>
         <item name="android:textColor">@color/black</item>

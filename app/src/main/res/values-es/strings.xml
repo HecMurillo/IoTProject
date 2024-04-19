@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="go_to_first">Ir al Primero</string>
-    <string name="go_to_second">Ir al Segundo</string>
-    <string name="go_to_third">Ir al Tercero</string>
-    <string name="go_to_list">Ir a la Lista</string>
+    <string name="app_name">ArduinoInteractivo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="title1">Arduinos</string>
+    <string name="text1">Arduino is a development platform based on a free hardware electronics board that incorporates a reprogrammable microcontroller and a series of female pins.</string>
+
+    <string name="title2">Basic Components</string>
+    <string name="text2">Basic components that make up an arduino</string>
+
+    <string name="title3">Advanced Components</string>
+    <string name="text3">Advanced arduino components</string>
+
+    <string name="title4">Resistors</string>
+    <string name="text4">This tool is used to decode information for resistors with axial conductors in a color band.</string>
 </resources>
