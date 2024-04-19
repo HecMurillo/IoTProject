@@ -14,4 +14,7 @@
 
     <string name="title4">Resistors</string>
     <string name="text4">This tool is used to decode information for resistors with axial conductors in a color band.</string>
+
+    <string name="infores">This tool is used to decode information for resistors with axial conductors in a color band. Select the number of bands and then their colors to determine the value and tolerance of the resistors or view all the resistors DigiKey has to offer.</string>
+
 </resources>

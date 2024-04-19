@@ -14,4 +14,7 @@
 
     <string name="title4">Resistencias</string>
     <string name="text4">Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.</string>
+
+    <string name="infores">Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores. Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias o vea todas las resistencias que DigiKey tiene para ofrecerle.</string>
+
 </resources>
