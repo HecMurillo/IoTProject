@@ -30,8 +30,3 @@ Si deseas contribuir a este proyecto, puedes seguir los siguientes pasos:
 - [JulioMurillo](https://github.com/HecMurillo) - Desarrollador 
 - [IsraelSanchez](https://github.com/Ysraelsn) - Desarrollador Principal
 - [ErikGrijalva](https://github.com/Erik-so) - Desarrollador
-
-
-## Contacto
-
-Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros a través de [correo@ejemplo.com](mailto:correo@ejemplo.com).
