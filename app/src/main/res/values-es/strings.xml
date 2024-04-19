@@ -16,5 +16,6 @@
     <string name="text4">This tool is used to decode information for resistors with axial conductors in a color band.</string>
 
     <string name="infores">This tool is used to decode information for resistors with axial conductors in a color band. Select the number of bands and then their colors to determine the value and tolerance of the resistors or view all the resistors DigiKey has to offer.</string>
-
+    <string name="infocab">Wide and female cables are essential components in the connection of electronic devices. Wide cables, also known as power cords, provide a robust and secure connection for the transmission of electrical power, while female connectors, with their receptacles designed to accept male connector pins, facilitate the connection and disconnection of devices.</string>
+    <string name="title5">Wires</string>
 </resources>

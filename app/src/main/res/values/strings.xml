@@ -16,5 +16,7 @@
     <string name="text4">Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.</string>
 
     <string name="infores">Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores. Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias o vea todas las resistencias que DigiKey tiene para ofrecerle.</string>
+    <string name="infocab">Los cables anchos y hembras son componentes esenciales en la conexión de dispositivos electrónicos. Los cables anchos, también conocidos como cables de alimentación, proporcionan una conexión robusta y segura para la transmisión de energía eléctrica, mientras que los conectores hembras, con sus receptáculos diseñados para aceptar los pines de los conectores macho, facilitan la conexión y desconexión de los dispositivos.</string>
+    <string name="title5">Cables</string>
 
 </resources>
